@@ -26,6 +26,19 @@
             <artifactId>mentawai</artifactId>
             <version>2.5.4</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.5.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.36</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -72,7 +85,6 @@
                 </configuration>
             </plugin>
         </plugins>
-
 
         <finalName>RentMenta</finalName>
     </build>

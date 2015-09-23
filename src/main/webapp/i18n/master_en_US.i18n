@@ -1,0 +1,8 @@
+#login page
+login.title=Please sign in
+login.email=Email
+login.password=Password
+login.rememberMe=Remember me
+login.signIn=Sign In
+
+index.title=Recent ads
