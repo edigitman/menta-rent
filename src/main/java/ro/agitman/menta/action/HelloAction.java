@@ -9,6 +9,7 @@ public class HelloAction extends BaseAction {
 		if (isEmpty(msg)) {
 			msg = "Why you did not type anything?";
 		}
+
 		output.setValue("msg", msg);
 		return SUCCESS;
 	}

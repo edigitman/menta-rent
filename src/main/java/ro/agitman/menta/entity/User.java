@@ -5,9 +5,10 @@ package ro.agitman.menta.entity;
  */
 public class User {
 
-    private Long id;
+    private Integer id;
     private String email;
     private String alias;
+    private String phone;
     private String password;
     private String token;
     private Boolean confirmed;
@@ -18,11 +19,11 @@ public class User {
         this.email = email;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -64,5 +65,13 @@ public class User {
 
     public void setConfirmed(Boolean confirmed) {
         this.confirmed = confirmed;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

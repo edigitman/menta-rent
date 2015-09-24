@@ -1,4 +1,8 @@
 #login page
+
+register.required_field=Required Field
+required_field=Required Field
+
 login.title=Please sign in
 login.email=Email
 login.password=Password
@@ -6,3 +10,13 @@ login.rememberMe=Remember me
 login.signIn=Sign In
 
 index.title=Recent ads
+
+register.title=Register
+register.email=Email
+register.password=Password
+register.confirm=Confirm
+
+account.title = General
+account.alias = Alias
+account.phone = Phone
+account.update = Update

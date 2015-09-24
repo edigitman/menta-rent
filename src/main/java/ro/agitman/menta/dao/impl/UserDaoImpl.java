@@ -5,6 +5,8 @@ import org.mentacontainer.example.BasicOperations;
 import ro.agitman.menta.dao.UserDao;
 import ro.agitman.menta.entity.User;
 
+import java.util.List;
+
 /**
  * Created by gitmaal on 23/09/2015.
  */
@@ -19,5 +21,10 @@ public class UserDaoImpl implements UserDao {
     public User findByEmail(String email) {
         User user = new User(email);
         return beanSession.loadUnique(user);
+    }
+
+    @Override
+    public void save(User user){
+        beanSession.insert(user);
     }
 }

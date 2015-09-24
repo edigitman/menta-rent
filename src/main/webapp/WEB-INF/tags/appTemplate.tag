@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ tag description="Simple Wrapper Tag" pageEncoding="UTF-8" %>
+<%@ taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <html lang="en">
@@ -33,11 +34,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">M</a>
+            <a class="navbar-brand" href="/Index.mtw">M</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li id="menuHome"><a href="/Index.mtw">Home</a></li>
                 <li><a href="/jsp/index.jsp">Index</a></li>
                 <li><a href="#contact">Add</a></li>
                 <li class="dropdown">
@@ -54,8 +55,14 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Account</a></li>
-                <li><a href="../navbar-static-top/">Register</a></li>
+                <mtw:isLogged negate="true">
+                    <li><a href="/Account.nav.mtw">Account</a></li>
+                    <li><a href="/jsp/register.jsp">Register</a></li>
+                </mtw:isLogged>
+                <mtw:isLogged>
+                    <li id="menuSettings"><a href="/Account.nav.mtw">Settings</a></li>
+                    <li><a href="/Logout.mtw">Logout</a></li>
+                </mtw:isLogged>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -78,8 +85,6 @@
     </div>
 
 </div>
-
-<t:appMenu/>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
